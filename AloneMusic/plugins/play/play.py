@@ -30,47 +30,9 @@ from AloneMusic.utils.logger import play_logs
 from AloneMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
-EMOJII = [
-    "🔥",
-    "😒",
-    "🥺",
-    "😒",
-    "💖",
-    "💘",
-    "💕",
-    "✨",
-    "🧪",
-    "🥰",
-    "🚩",
-    "🫡",
-    "💔",
-    "🦠",
-    "😓",
-    "🫧",
-]
-
-
-async def delete_after_delay(msg):
-    try:
-        await asyncio.sleep(60)
-        await msg.delete()
-    except Exception:
-        pass
-
-
 @app.on_message(
-    filters.command(
-        [
-            "play",
-            "vplay",
-            "cplay",
-            "cvplay",
-            "playforce",
-            "vplayforce",
-            "cplayforce",
-            "cvplayforce",
-        ]
-    )
+   filters.command(["play", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce"] ,prefixes=["/", "!", "%", ",", "", ".", "@", "#"])
+            
     & filters.group
     & ~BANNED_USERS
 )
@@ -86,16 +48,9 @@ async def play_commnd(
     url,
     fplay,
 ):
-    emoji = random.choice(EMOJII)
-
-    sticker_msg = await message.reply_sticker(
-        "CAACAgUAAyEFAASOlzVAAAEBbMVoZBvc22oR8X-QlMPpERj8bdrDtgAChAsAAjXBOFddqD7hjDYLoh4E"
+    mystic = await message.reply_text(
+        _["play_2"].format(channel) if channel else _["play_1"]
     )
-
-    asyncio.create_task(delete_after_delay(sticker_msg))
-
-    # स्टिकर के बाद का play message
-    mystic = await message.reply_text(_["play_2"].format(channel) if channel else emoji)
     plist_id = None
     slider = None
     plist_type = None
@@ -107,6 +62,7 @@ async def play_commnd(
         if message.reply_to_message
         else None
     )
+
     video_telegram = (
         (message.reply_to_message.video or message.reply_to_message.document)
         if message.reply_to_message
