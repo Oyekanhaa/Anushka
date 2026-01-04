@@ -32,7 +32,7 @@ from config import BANNED_USERS, lyrical
 
 EMOJII = [
     "🔥",
-    "💋",
+    "😒",
     "🥺",
     "😒",
     "💖",
@@ -42,7 +42,7 @@ EMOJII = [
     "🧪",
     "🥰",
     "🚩",
-    "🫦",
+    "🫡",
     "💔",
     "🦠",
     "😓",
