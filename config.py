@@ -33,7 +33,7 @@ ADS_MODE = getenv("ADS_MODE", None)
 LOGGER_ID = int(getenv("LOGGER_ID", 0))
 
 # Get this value from  on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", 8106551502))
+OWNER_ID = int(getenv("OWNER_ID", 7682307978))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -90,22 +90,22 @@ confirmer = {}
 
 START_IMG_URL = getenv(
     "START_IMG_URL",
-    "https://files.catbox.moe/34xlvu.jpg",
+    "https://files.catbox.moe/5tvj2i.jpg",
 )
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "https://files.catbox.moe/34xlvu.jpg",
+    "https://files.catbox.moe/5tvj2i.jpg",
 )
-PLAYLIST_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
-STATS_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
-TELEGRAM_AUDIO_URL = "https://files.catbox.moe/34xlvu.jpg"
-TELEGRAM_VIDEO_URL = "https://files.catbox.moe/34xlvu.jpg"
-STREAM_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
-SOUNCLOUD_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
-YOUTUBE_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://files.catbox.moe/34xlvu.jpg"
+PLAYLIST_IMG_URL = "https://files.catbox.moe/5tvj2i.jpg"
+STATS_IMG_URL = "https://files.catbox.moe/5tvj2i.jpg"
+TELEGRAM_AUDIO_URL = "https://files.catbox.moe/5tvj2i.jpg"
+TELEGRAM_VIDEO_URL = "https://files.catbox.moe/5tvj2i.jpg"
+STREAM_IMG_URL = "https://files.catbox.moe/5tvj2i.jpg"
+SOUNCLOUD_IMG_URL = "https://files.catbox.moe/5tvj2i.jpg"
+YOUTUBE_IMG_URL = "https://files.catbox.moe/5tvj2i.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://files.catbox.moe/5tvj2i.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://files.catbox.moe/5tvj2i.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://files.catbox.moe/5tvj2i.jpg"
 
 
 def time_to_seconds(time):
